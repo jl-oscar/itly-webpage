@@ -8,6 +8,7 @@ interface HeaderFooterProps {
 const HeaderButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 `;
 
 interface ButtonProps {
@@ -16,7 +17,7 @@ interface ButtonProps {
 
 const HeaderButton = styled.a<ButtonProps>`
   text-align: center;
-  padding: 20px 35px;
+  padding: ${(props) => (props.inverted ? "20px 35px" : "20px 0px")};
   font-size: 22px;
   font-weight: ${(props) => (props.inverted ? "600" : "normal")};
   color: ${(props) => (props.inverted ? "white" : "black")};
