@@ -48,7 +48,7 @@ export const HeaderFooter: FC<HeaderFooterProps> = ({ children }) => {
         </HeaderButtonsContainer>
       </div>
       <div className="flex-1">{children}</div>
-      <Footer>Some sample text</Footer>
+      <Footer>Footer to be</Footer>
     </div>
   );
 };
