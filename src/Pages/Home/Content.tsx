@@ -7,8 +7,10 @@ const StartParagraph: FC<{
   noDivider?: boolean;
 }> = ({ title, text, noDivider }) => {
   return (
-    <div className="flex flex-col justify-center items-center my-20">
-      <h2 className="text-5xl font-semibold mb-20">{title}</h2>
+    <div className="flex flex-col justify-center items-center my-12 md:my-20">
+      <h2 className="text-4xl md:text-5xl font-semibold mb-10 md:mb-20 text-center">
+        {title}
+      </h2>
       <p className="text-xl text-center leading-relaxed mb-12">{text}</p>
       {!noDivider && <DividerDiv px={120} />}
     </div>
@@ -17,11 +19,13 @@ const StartParagraph: FC<{
 
 export const Content = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-44">
+    <div className="flex flex-col justify-center items-center overflow-hidden">
       {/* Upp, upp och iväg */}
-      <div className="flex flex-col justify-center items-center my-20">
-        <h2 className="text-7xl font-semibold mb-12">Upp, upp och iväg!</h2>
-        <p className="text-3xl text-center px-40 font-light leading-relaxed">
+      <div className="flex flex-col justify-center items-center my-20 md:max-w-2xl sm:max-w-xl text-center">
+        <h2 className="text-4xl md:text-6xl font-semibold mb-12">
+          Upp, upp och iväg!
+        </h2>
+        <p className="text-2xl md:text-3xl text-center font-light leading-relaxed">
           Itly är ett Umeåbaserat konsultbolag med expertis inom BI- och
           mjukvaruutveckling. Med gedigen erfarenhet inom vårt arbete, och med
           lokala såväl som internationella kunder, kastar vi ett brett nät i
@@ -29,7 +33,7 @@ export const Content = () => {
         </p>
       </div>
 
-      <div className="mx-72">
+      <div className="md:max-w-xl">
         {/* Hela stacken */}
         <StartParagraph
           title="Hela stacken."
