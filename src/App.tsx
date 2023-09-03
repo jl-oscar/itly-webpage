@@ -1,23 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Contact } from "./Pages/Contact/Contact";
-import { Home } from "./Pages/Home/Home";
-import { About } from "./Pages/About/About";
-import { HeaderFooter } from "./Components/HeaderFooter/HeaderFooter";
-import { Consultants } from "./Pages/Consultants/Consultants";
 
-function App() {
+import { MantineProvider } from "@mantine/core";
+import { HeaderFooter } from "./Components";
+import { About, Consultants, Contact, Home } from "./Pages";
+
+export default function App() {
   return (
-    <HeaderFooter>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/consultants" element={<Consultants />} />
-        </Routes>
-      </Router>
-    </HeaderFooter>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <HeaderFooter>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/consultants" element={<Consultants />} />
+          </Routes>
+        </Router>
+      </HeaderFooter>
+    </MantineProvider>
   );
 }
-
-export default App;

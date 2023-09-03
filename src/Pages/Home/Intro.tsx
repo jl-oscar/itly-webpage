@@ -8,7 +8,8 @@ export const Intro = () => {
         Vi på Itly hjälper våra kunder till hållbara digitala lösningar.
       </p>
       <a>
-        <button className="mt-10 p-4 md:p-10 text-xl md:text-2xl font-semibold bg-black text-white">
+        {/* TODO: Replace with mantine button when "variant=filled" works */}
+        <button className="mt-10 p-4 md:p-6 text-l md:text-xl font-medium bg-black text-white">
           När, var och hur?
         </button>
       </a>
